@@ -16,7 +16,7 @@
     <td><%= merchant.merchant_id %></td>
     <td><%= merchant.company_name %></td>
     <td><%= merchant.dba_name %></td>
-    <td><%= merchant.institution_id %></td>
+    <td><%= Institution.find(merchant.institution_id).institution_name %></td>
     <td><%= link_to 'Show', merchant %></td>
     <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
     <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
