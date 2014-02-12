@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  merchant_id: MyString
+  company_name: MyString
+  dba_name: MyString
+
+two:
+  merchant_id: MyString
+  company_name: MyString
+  dba_name: MyString
