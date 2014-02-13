@@ -11,19 +11,20 @@
     <th></th>
   </tr>
 
-<% @merchants.each do |merchant| %>
-  <tr>
-    <td><%= link_to '<i class="icon-search">'.html_safe, merchant, class: "btn" %></td>
-    <td><%= merchant.merchant_id %></td>
-    <td><%= merchant.company_name %></td>
-    <td><%= merchant.dba_name %></td>
-    <td><%= Institution.find(merchant.institution_id).institution_name %></td>
-    <td><%= link_to '<i class="icon-pencil">'.html_safe, edit_merchant_path(merchant), class: "btn" %></td>
-    <td><%= link_to '<i class="icon-trash">'.html_safe, merchant, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+      <% @merchants.each do |merchant| %>
+        <tr>
+          <td><%= link_to '<i class="icon-search">'.html_safe, merchant, class: "btn" %></td>
+          <td><%= merchant.merchant_id %></td>
+          <td><%= merchant.company_name %></td>
+          <td><%= merchant.dba_name %></td>
+          <td><%= Institution.find(merchant.institution_id).institution_name %></td>
+          <td><%= link_to '<i class="icon-pencil">'.html_safe, edit_merchant_path(merchant), class: "btn" %></td>
+          <td><%= link_to '<i class="icon-trash">'.html_safe, merchant, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+
 </table>
 
 <br />
 
-<%= link_to 'Add New <i class="icon-plus-sign">'.html_safe, new_merchant_path, class: "btn btn-primary" %>
+<%= link_to 'Add New', new_merchant_path, class: "btn btn-primary" %>
