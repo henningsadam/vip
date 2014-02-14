@@ -8,11 +8,16 @@ class Merchant < ActiveRecord::Base
   belongs_to :institution
 
 
-  after_create :new_merchant_confirmation
+  after_create :send_new_merchant_confirmation
+  after_destroy :send_delete_merchant_confirmation
 
   private
 
-  def new_merchant_confirmation
-  	MerchantMailer.new_merchant_confirmation(self).deliver
+  def send_new_merchant_confirmation
+  	MerchantMailer.send_new_merchant_confirmation(self).deliver
+  end
+
+  def send_delete_merchant_confirmation
+  	MerchantMailer.send_delete_merchant_confirmation(self).deliver
   end
 end
