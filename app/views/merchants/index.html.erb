@@ -6,6 +6,7 @@
     <th>Merchant ID</th>
     <th>Company Name</th>
     <th>DBA Name</th>
+    <th>Email</th>
     <th>Institution</th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
       <td><%= merchant.merchant_id %></td>
       <td><%= merchant.company_name %></td>
       <td><%= merchant.dba_name %></td>
+      <td><%= merchant.email %></td>
       <td><%= Institution.find(merchant.institution_id).institution_name %></td>
       <td><%= link_to '<i class="icon-pencil">'.html_safe, edit_merchant_path(merchant), class: "btn" %></td>
       <td><%= link_to '<i class="icon-trash">'.html_safe, merchant, class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %></td>

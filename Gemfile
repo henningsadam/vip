@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 group :development do
 	gem 'better_errors'
+	gem 'letter_opener'
 end
 
 

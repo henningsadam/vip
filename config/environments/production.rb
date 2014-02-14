@@ -51,6 +51,16 @@ Vip::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  #settings for Adam's Mandrill account
+  # config.action_mailer.smtp_settings = {
+   #   address:              'smtp.mandrillapp.com',
+   #   port:                 587,
+   #   domain:               'my_site.com',
+   #   user_name:            'hennings.adam@gmail.com',
+   #   password:             'Y9wXQ271RMsbugnMTWdJGQ',
+   #   authentication:       'plain',
+   #   enable_starttls_auto: true  }
+
   # Enable threaded mode
   # config.threadsafe!
 
