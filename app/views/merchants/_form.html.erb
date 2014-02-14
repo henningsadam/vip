@@ -1,19 +1,8 @@
 <%= simple_form_for(@merchant, :html => { :class => "form-horizontal" }) do |f| %>
-  <% if @merchant.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
-
-      <ul>
-      <% @merchant.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= f.input :merchant_id, label: "Merchant ID" %>
-  <%= f.input :company_name, label: "Company Name" %>
-  <%= f.input :dba_name, label: "DBA Name" %>
+  <%= f.error_notification %>
+  <%= f.input :merchant_id, label: "Merchant ID", placeholder: "Merchant ID" %>
+  <%= f.input :company_name, label: "Company Name", placeholder: "Company Name" %>
+  <%= f.input :dba_name, label: "DBA Name", placeholder: "DBA Name" %>
   <%= f.association :institution, label: "Institution", label_method: :institution_name %>
   <%= f.button :submit %>
 <% end %>
